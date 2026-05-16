@@ -134,7 +134,7 @@ namespace JuegoProyectoFinal
             lblLeyenda.Size = new Size(200, 80);
             lblLeyenda.Font = new Font("Segoe UI", 8);
             lblLeyenda.ForeColor = Color.FromArgb(180, 180, 200);
-            lblLeyenda.Text = "LEYENDA:\n♔ ♖ ♙ = J1 (Negras)\n♚ ♜ ♟ = J2 (Blancas)";
+            lblLeyenda.Text = "LEYENDA:\n♔ ♖ ♙ = J1 (Negras )\n♚ ♜ ♟ = J2 (Blancas)";
 
             btnReiniciar = new Button();
             btnReiniciar.Text = "↺ Nueva Partida";
