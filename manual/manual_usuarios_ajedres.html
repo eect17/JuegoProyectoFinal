@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Usuario - Juego de Ajedrez</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #eaf4fb;
+      color: #1a2e3b;
+    }
+
+    h1 { font-size: 1.8rem; margin-bottom: 5px; color: #0d6e9e; }
+    h2 { font-size: 1.3rem; border-bottom: 2px solid #0d6e9e; padding-bottom: 5px; margin-top: 30px; color: #0d6e9e; }
+    h3 { font-size: 1.1rem; margin-top: 20px; color: #1a5f7a; }
+
+    p { line-height: 1.6; }
+
+    ol { padding-left: 20px; }
+    ol li { margin-bottom: 6px; line-height: 1.6; }
+
+    .intro {
+      background: #d0eaf7;
+      border-left: 4px solid #0d6e9e;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+    }
+
+    .aviso {
+      background: #fff8e1;
+      border-left: 4px solid #f0a500;
+      padding: 10px 15px;
+      margin-top: 20px;
+    }
+
+    .creditos {
+      background: #d0eaf7;
+      border-left: 4px solid #0d6e9e;
+      padding: 12px 15px;
+      margin-top: 30px;
+    }
+
+    .creditos h2 {
+      border-bottom: none;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .creditos ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .creditos ul li {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #555;
+      border-top: 1px solid #0d6e9e;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>♟ Manual de Usuario — Juego de Ajedrez</h1>
+  <p><em>Desarrollado por estudiantes de Ingeniería en Informática y Sistemas, primer semestre — Universidad Rafael Landívar, Campus Quetzaltenango.</em></p>
+
+  <div class="intro">
+    Bienvenido al juego de ajedrez. Este programa está pensado para que dos jugadores puedan disfrutar una partida juntos de forma sencilla.
+  </div>
+
+  <h2>Reglas generales</h2>
+  <ol>
+    <li>Cada usuario deberá registrarse al inicio de cada partida.</li>
+    <li>Los datos de los usuarios no se guardarán para partidas futuras.</li>
+    <li>El puntaje se calcula y almacena automáticamente; no afecta partidas posteriores.</li>
+    <li>El juego está diseñado para 2 jugadores por partida.</li>
+    <li>Cada jugador tendrá un color asignado al iniciar la partida.</li>
+    <li>Los jugadores deben tomar turnos para mover las piezas.</li>
+    <li>Cada jugador inicia con las mismas piezas: una torre, un rey, un alfil y peones.</li>
+    <li>Una pieza eliminada no puede volver a usarse durante la partida.</li>
+  </ol>
+
+  <h2>Las piezas</h2>
+
+  <h3>♜ Torre</h3>
+  <p>Se mueve en línea recta horizontal o vertical, tantas casillas como se desee, siempre que no haya piezas bloqueando el camino.</p>
+
+  <h3>♚ Rey</h3>
+  <p>Se mueve una casilla en cualquier dirección. Es la pieza principal — la partida termina cuando el rey es capturado.</p>
+
+   <h3>♟ Peón</h3>
+  <p>Avanza una casilla hacia adelante (dos casillas en su primer movimiento). Captura en diagonal. No puede retroceder.</p>
+
+  <h2>Jugabilidad</h2>
+  <ol>
+    <li>Cada pieza tiene un valor. Al capturar una pieza rival se obtiene un puntaje según su importancia.</li>
+    <li>Para mover, ingresa las coordenadas en el panel: primero la posición de tu pieza y luego la casilla de destino.</li>
+    <li>El sistema verifica si el movimiento es válido. Si no lo es, mostrará un error y pedirá nuevas coordenadas.</li>
+    <li>El objetivo es capturar el rey del jugador contrario. Quien lo logre gana la partida.</li>
+  </ol>
+
+  <div class="aviso">
+    <strong>Importante:</strong> Cualquier movimiento que no cumpla las reglas será rechazado automáticamente por el sistema.
+  </div>
+
+ <div class="estructura del juego">
+   <h2>Inicio</h2>
+<h3> al ingresar al juego tenemos la pantalla de inicio, la cual cuenta con 4 opciones</h3>
+  <img src = "img_manual/inicio_ajedres.jpeg" width="500" height="597"/>
+<ol>
+ <li>iniciar partida</li>
+  <ul>
+    <li>en este apartado podremos acceder a el juego</li>
+    <li>es donde se tienen que acceder para iniciar el juego</li>
+  </ul>
+ <li>ver reglas</li>
+  <ul>
+   <li>Aqui podras ver el reglamento basico para poder comprender el juego</li>
+  </ul>
+ <li>mejor punyaje</li>
+   <ul>
+    <li>aqui se registrar el puntuaje mas alto al momento con el nombre de usuario</li>
+   </ul>
+ <li>salir</li>
+  <ul>
+   <li>aqui puedes salir de el juego</li>
+  </ul>  
+</ol>
+
+<h2>Ingreso</h2>
+  <p>para ingresar es necesario colocar usuario y contraseña en el registro</P>
+  <P>por si no lo recuerdas el usuario es:"admin" y la contraseña es "!23456789"</p>
+<img src = "img_manual/ingreso.jpeg" width="457" height="382"/>
+
+<h2>Registro de jugadores</h2>
+  <p>Para identificar a los turnos puedes registrar aqui los jugadores, el primero en registrarse sera el     que juege en primer turno con las piesas blancas y el segundo jugara en segundo turno con las piesas   negras.</p>
+<img src = "img_manual/registro.jpeg" width="425" height="296"/>
+
+<h2>vista de tablero</h2>
+ <p>las piesas estan repartidas en un tablero de 8x8 y enumerado de 0 a 7  puedes saber la posicion exacta con las filas y columnas.</p>
+  <img src = "img_manual/viata.jpeg" width="1096" height="821"/>
+
+<h2>Movimientos</h2>
+ <p>el tablero funciona de una manera como vectorizada, es decir donde tienes que ubicarlo con cordenadas en x y y, en el juego encontraras dos paneles para poder moverte, el primero deve ser la ubicacion de donde esta tu pieza seleccionada y el segundo es el lugar a la que la puedes mover</p>
+    <img src = "img_manual/movimiento.jpeg" width="287" height="247"/>
+  <p>el movimiento se realizara automaticamente y se registrara el punteo y si se comio una pieza en el movimiento ya no aparecera en el tablero </p>
+   <img src = "img_manual/puntos.jpeg" width="1090" height="808"/>
+ <p>en el momento que uno de los jugadores se bloquearan los movimientos para ambos en el tablero y se registrara su puntuacion, puedes iniciar una nueva partida o ir al menu principal pero no se puede realizar mas movimientos. </p>
+   <img src = "img_manual/ganar.jpeg" width="1085" height="806"/>
+<p> si el movimiento no es valido aparecera un aviso y no se permitira que la piesa se mueva, tampoco se permitira que el turno continue.</p>
+   <img src = "img_manual/invalido.jpeg" width="252" height="55"/>
+ <p>si tratas de mover otra piesa que no es la tuya se negara el movimiento</p>
+    <img src = "img_manual/otro.jpeg" width="201" height="45"/>
+
+
+    <h2>♟ Créditos de desarrollo</h2>
+    <p><strong>Catedrático:</strong> Ingeniero: Manuel Rojas</p>
+    <p><strong>Desarrollado por:</strong></p>
+    <ul>
+      <li>Edwin Esteban Cox Tay</li>
+      <li>Anllela Yasmin Perez Perez</li>
+      <li>Adrián Alejandro Gutiérrez Santos</li>
+    </ul>
+  </div>
+
+  <footer>
+    Universidad Rafael Landívar · Campus Quetzaltenango · Ingeniería en Informática y Sistemas · Primer Semestre · 2026 
+  </footer>
+
+</body>
+</html>
