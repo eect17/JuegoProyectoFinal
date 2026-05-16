@@ -65,7 +65,7 @@ namespace JuegoProyectoFinal
 
             // Origen
             var lblOrigen = new Label();
-            lblOrigen.Text = "Origen (fila col):";
+            lblOrigen.Text = "Origen (fila letra):";
             lblOrigen.ForeColor = Color.FromArgb(220, 180, 90);
             lblOrigen.Font = new Font("Segoe UI", 9, FontStyle.Bold);
             lblOrigen.Location = new Point(lx, 190);
@@ -83,7 +83,7 @@ namespace JuegoProyectoFinal
 
             // Destino
             var lblDestino = new Label();
-            lblDestino.Text = "Destino (fila col):";
+            lblDestino.Text = "Destino (fila letra):";
             lblDestino.ForeColor = Color.FromArgb(220, 180, 90);
             lblDestino.Font = new Font("Segoe UI", 9, FontStyle.Bold);
             lblDestino.Location = new Point(lx, 250);
@@ -102,7 +102,7 @@ namespace JuegoProyectoFinal
 
             // Ejemplo
             var lblEjemplo = new Label();
-            lblEjemplo.Text = "Ejemplo: 6 3";
+            lblEjemplo.Text = "Ejemplo: 6 C";
             lblEjemplo.ForeColor = Color.FromArgb(120, 120, 150);
             lblEjemplo.Font = new Font("Segoe UI", 8, FontStyle.Italic);
             lblEjemplo.Location = new Point(lx, 302);
@@ -134,7 +134,7 @@ namespace JuegoProyectoFinal
             lblLeyenda.Size = new Size(200, 80);
             lblLeyenda.Font = new Font("Segoe UI", 8);
             lblLeyenda.ForeColor = Color.FromArgb(180, 180, 200);
-            lblLeyenda.Text = "LEYENDA:\n♔ ♖ ♙ = J1 (Blancas)\n♚ ♜ ♟ = J2 (Negras)";
+            lblLeyenda.Text = "LEYENDA:\n♔ ♖ ♙ = J1 (Negras)\n♚ ♜ ♟ = J2 (Blancas)";
 
             btnReiniciar = new Button();
             btnReiniciar.Text = "↺ Nueva Partida";
@@ -195,15 +195,27 @@ namespace JuegoProyectoFinal
 
             int f1, c1, f2, c2;
 
-            if (!int.TryParse(partsOrigen[0], out f1) || !int.TryParse(partsOrigen[1], out c1))
+            if (!int.TryParse(partsOrigen[0], out f1))
             {
-                MostrarError("Origen debe ser números. Ejemplo: 6 3");
+                MostrarError("Fila inválida. Ejemplo: 6 C");
+                return;
+            }
+            c1 = LetraAColumna(partsOrigen[1]);
+            if (c1 == -1)
+            {
+                MostrarError("Columna inválida. Usa A-H. Ejemplo: 6 C");
                 return;
             }
 
-            if (!int.TryParse(partsDestino[0], out f2) || !int.TryParse(partsDestino[1], out c2))
+            if (!int.TryParse(partsDestino[0], out f2))
             {
-                MostrarError("Destino debe ser números. Ejemplo: 5 3");
+                MostrarError("Fila inválida. Ejemplo: 5 C");
+                return;
+            }
+            c2 = LetraAColumna(partsDestino[1]);
+            if (c2 == -1)
+            {
+                MostrarError("Columna inválida. Usa A-H. Ejemplo: 5 D");
                 return;
             }
 
@@ -322,7 +334,8 @@ namespace JuegoProyectoFinal
             {
                 g.DrawString(i.ToString(), fCoord, Brushes.Gray,
                     OFFSET_X - 20, OFFSET_Y + i * TAM_CASILLA + TAM_CASILLA / 2 - 8);
-                g.DrawString(i.ToString(), fCoord, Brushes.Gray,
+                string letraCol = ((char)('A' + i)).ToString();
+                g.DrawString(letraCol, fCoord, Brushes.Gray,
                     OFFSET_X + i * TAM_CASILLA + TAM_CASILLA / 2 - 5, OFFSET_Y - 22);
             }
 
@@ -426,6 +439,13 @@ namespace JuegoProyectoFinal
                 panelTablero.Invalidate();
                 txtOrigen.Focus();
             }
+        }
+        private int LetraAColumna(string letra)
+        {
+            if (string.IsNullOrWhiteSpace(letra)) return -1;
+            char c = char.ToUpper(letra.Trim()[0]);
+            if (c < 'A' || c > 'H') return -1;
+            return c - 'A';
         }
     }
 }

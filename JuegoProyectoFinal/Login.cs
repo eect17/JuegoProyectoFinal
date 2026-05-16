@@ -12,7 +12,7 @@ namespace JuegoTablero
             Console.Write("Contraseña: ");
             string pass = Console.ReadLine();
 
-            if (user == "admin" && pass == "123456789")
+            if (user == "admin" && pass == "Sistemas2026!")
                 return true;
 
             Console.WriteLine("Datos incorrectos");

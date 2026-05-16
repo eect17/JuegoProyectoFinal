@@ -12,7 +12,7 @@ namespace JuegoProyectoFinal
         private Label lblError;
 
         private const string USUARIO_CORRECTO = "admin";
-        private const string PASSWORD_CORRECTA = "123456789";
+        private const string PASSWORD_CORRECTA = "Sistemas2026!";
 
         public FormLogin()
         {
