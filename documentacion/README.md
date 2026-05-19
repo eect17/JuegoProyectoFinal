@@ -6,3 +6,4 @@ Esta carpeta contiene toda la documentación del proyecto:
 - 🎙️ Podcast (episodios de audio)
 - 🎥 Video de explicación
 - 📋 Tabla de pruebas
+- 👽 Diagrama
