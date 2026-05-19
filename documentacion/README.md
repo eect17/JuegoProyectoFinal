@@ -7,3 +7,4 @@ Esta carpeta contiene toda la documentación del proyecto:
 - 🎥 Video de explicación
 - 📋 Tabla de pruebas
 - 👽 Diagrama
+- 💎 Codigo Base Consola
